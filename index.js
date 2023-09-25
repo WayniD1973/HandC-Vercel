@@ -4,22 +4,22 @@ const express = require("express");
 const app = express();
 const minify = require('express-minify');
 const uglify = require('uglify-js');
-const chatRoutes = require('/home/runner/HandC/routes/built/chatRoutes.js');
-const hammyRoutes = require('/home/runner/HandC/routes/built/hammyRoutes.js');
-const helloRoutes = require('/home/runner/HandC/routes/built/helloRoutes.js');
-const homeRoutes = require('/home/runner/HandC/routes/built/homeRoutes.js');
-const loginRoutes = require('/home/runner/HandC/routes/built/loginRoutes.js');
-const logoutRoutes = require('/home/runner/HandC/routes/built/logoutRoutes.js');
-const offlineRoutes = require('/home/runner/HandC/routes/built/offlineRoutes.js');
-const policiesRoutes = require('/home/runner/HandC/routes/built/policiesRoutes.js');
-const productsRoutes = require('/home/runner/HandC/routes/built/productsRoutes.js');
-const scriptManagersRoutes = require('/home/runner/HandC/routes/built/scriptManagersRoutes.js');
-const searchleRoutes = require('/home/runner/HandC/routes/built/searchleRoutes.js');
-const serviceWorkersRoutes = require('/home/runner/HandC/routes/built/serviceWorkersRoutes.js');
-const setCookieRoutes = require('/home/runner/HandC/routes/built/setCookieRoutes.js');
-const signupRoutes = require('/home/runner/HandC/routes/built/signupRoutes.js');
-const apiRoutes = require('/home/runner/HandC/routes/built/apiRoutes.js');
-const authRoutes = require('/home/runner/HandC/routes/built/authRoutes.js');
+const chatRoutes = require('./routes/built/chatRoutes.js');
+const hammyRoutes = require('./routes/built/hammyRoutes.js');
+const helloRoutes = require('./routes/built/helloRoutes.js');
+const homeRoutes = require('./routes/built/homeRoutes.js');
+const loginRoutes = require('./routes/built/loginRoutes.js');
+const logoutRoutes = require('./routes/built/logoutRoutes.js');
+const offlineRoutes = require('./routes/built/offlineRoutes.js');
+const policiesRoutes = require('./routes/built/policiesRoutes.js');
+const productsRoutes = require('./routes/built/productsRoutes.js');
+const scriptManagersRoutes = require('./routes/built/scriptManagersRoutes.js');
+const searchleRoutes = require('./routes/built/searchleRoutes.js');
+const serviceWorkersRoutes = require('./routes/built/serviceWorkersRoutes.js');
+const setCookieRoutes = require('./routes/built/setCookieRoutes.js');
+const signupRoutes = require('./routes/built/signupRoutes.js');
+const apiRoutes = require('./routes/built/apiRoutes.js');
+const authRoutes = require('./routes/built/authRoutes.js');
 const { rateLimit } = require('express-rate-limit');
 const requestIP = require('request-ip');
 const cookie = require('cookie');
@@ -65,7 +65,7 @@ var myErrorHandler = function (errorInfo, callback) {
 };
 
 app.use(minify({
-  cache: '/home/runner/HandC/.minification-cache',
+  cache: './.minification-cache',
   uglifyJsModule: uglify,
   errorHandler: myErrorHandler,
   jsMatch: /javascript/,
@@ -162,7 +162,7 @@ io.on('connection', function(socket){
 	});
 });
 app.use('/socket.io/', cors({ allowedOrigins: [ 'github.com', 'google.com' ] }));
-app.use('/test', express.static('/home/runner/HandC/public'))
+app.use('/test', express.static('./public'))
 app.use('/api', apiRoutes)
 app.use('/auth', authRoutes)
 app.use('/chat', chatRoutes)
@@ -180,7 +180,7 @@ app.use('/serviceWorkers', serviceWorkersRoutes)
 app.use('/setCookie', setCookieRoutes)
 app.use('/signup', signupRoutes)
 app.get('*', function routeHandler(req, res) {
-	res.status(404).sendFile('/home/runner/HandC/build/errors/404/404.html')
+	res.status(404).sendFile('./build/errors/404/404.html')
 });
 app.listen(443)
 server.listen(3000, function(){
