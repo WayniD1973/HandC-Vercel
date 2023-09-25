@@ -1,0 +1,1 @@
+fetch("https://login-finished.wumpus-dev.repl.co/signup",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({username:"Wumpus",password:"Developer"})}).then(e=>console.log(e.json()));

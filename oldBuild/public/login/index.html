@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<script src="https://kit.fontawesome.com/f5b57efe56.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/test/login/style.css">
+		<link rel="shortcut icon" href="/Logo 16x16.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap" rel="stylesheet">
+	<script src="/cookies.js"></script>
+    <title>Login | H&C</title>
+</head>
+
+<body>
+    <section class="side">
+        <p class="main-msg">H&C</p>
+        <p class="secondary-msg">Log in to H&C</br>Then you'll have access to the<br>parts of our website the require you<br>to be logged in.</p>
+    </section>
+
+    <section class="main">
+        <p class="title">Log in</p>
+            <div class="form-control">
+                <input type="text" placeholder="Username" required class="usernameInput" id="usernameInput" maxlength="50">
+                <div class="focused-border"></div>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="form-control">
+                <input type="password" placeholder="Password" required class="passwordInput" id="passwordInput">
+                <div class="focused-border"></div>
+                <i class="fas fa-unlock"></i>
+            </div>
+
+            <button class="action" onclick=login()>Log in</button>
+				<p class="register" id="UnameOrPassError" style="color: #ff0000; text-align: center; display: none;">
+					<i class="fa-solid fa-circle-exclamation"></i>
+    			That Username Is Already Taken!<br><br>
+				</p>
+				<p class="register" id="unfilledfields" style="color: #ff0000; text-align: center; display: none;">
+					<i class="fa-solid fa-circle-exclamation"></i>
+    			Please Fill In All Of The Fields<br><br>
+				</p>
+        <p class="register">Don't have an account?<a href="../signup/">Sign up!</a><br><br><center>&copy;H&amp;C&trade; 2023</center></p>
+    </section>
+	<script src="/test/login/script.js"></script>
+</body>
+</html>

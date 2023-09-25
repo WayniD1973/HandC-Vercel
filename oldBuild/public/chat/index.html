@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Hammy Chat</title>
+</head>
+<body id="main">
+  <form onubmit="return false;">
+    <!-- <input type="text" placeholder="Type something to chat!" id="chatinput" class="chatinput"> -->
+		<p class="chatinput" id="chatinput">Messaging is disabled!</p>
+    <input type="submit" value="Send" class="submit" onclick=sendmessage()>
+  </form>
+  <div class="sidebar" id="sidebar">
+    <div class="logo" id="logo">
+      Hammy Chat
+    </div>
+    <div class="usernameElement" id="usernameElement">
+      (username goes here)
+    </div>
+    <div class="channels">
+      <div class="general">
+        (Text) General
+      </div>
+      <div class="voice-general">
+        <button onclick=joinVoice()>(Voice) General</button>
+      </div>
+    </div>
+    <center id="loadingText">Hammy Chat is loading...</center>
+    <div class="themes">
+      <button onclick=monokaiTheme()>Monokai Theme</button><br>
+      <button onclick=regularTheme()>Regular Theme</button><br>
+      <button onclick=matrixTheme()>Matrix Theme</button><br>
+      <button onclick=rubyTheme()>Ruby Theme</button><br>
+    </div>
+    <div class="channelUtils">
+      <button onclick=useCustomChannel()>Use Custom Channel</button><br>
+      <button onclick=createCustomChannel()>Make Custom Channel</button><br>
+    </div>
+    <div class="userUtils">
+      <button onclick=reportUser()>Report User</button><br>
+    </div>
+    <div class="logout">
+      <button onclick=logout()>Logout</button>
+    </div>
+    <button onclick=gohome()>Go back home</button><br>
+    <div id="google_translate_element" class="translate"></div>
+  </div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        }
+    </script>
+ 
+    <script type="text/javascript"
+            src=
+"https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit">
+    </script>
+  <script src="script.js"></script>
+  <script src="themes.js"></script>
+  <script src="consoleWarnings.js"></script>
+</body>
+</html>

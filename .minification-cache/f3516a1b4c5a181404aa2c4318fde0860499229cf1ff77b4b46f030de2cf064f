@@ -1,0 +1,1 @@
+if(""!==window.location.search&&null!==window.location.search){const a=window.location.search.split("=")[1].split("&")[0],b=window.location.search.split("=")[2];createCookie(a,b,31)}

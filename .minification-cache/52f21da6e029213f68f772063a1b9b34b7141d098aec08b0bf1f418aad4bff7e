@@ -1,0 +1,1 @@
+function report(){var e=document.getElementById("input").value,t=localStorage.getItem("username"),n=document.getElementById("input2").value,u=document.getElementById("input3").value,a=document.getElementById("input4").value;window.location.replace("https://wechat-db.h-and-c.co.uk/report.php?user="+e+"&username="+t+"&reason="+n+"&message="+u+"&channel="+a)}

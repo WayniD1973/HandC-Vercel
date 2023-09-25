@@ -1,0 +1,1 @@
+body{min-height:100dvh}main{min-height:100dvh}.productCards{min-height:50dvh}hc-productCard{display:block;width:20%;height:40%;background:#f4ebeb}

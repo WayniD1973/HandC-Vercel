@@ -1,0 +1,11 @@
+const userListSection=document.querySelector(".user-list tbody"),banUserSection=document.querySelector(".ban-user form"),suspendUserSection=document.querySelector(".suspend-user form");function banUser(e){console.log(`User with ID ${e} has been banned!`)}function suspendUser(e){console.log(`User with ID ${e} has been suspended!`)}banUserSection.addEventListener("submit",e=>{e.preventDefault();e=document.querySelector("#user-id").value;console.log(`User with ID ${e} has been banned!`)}),suspendUserSection.addEventListener("submit",e=>{e.preventDefault();e=document.querySelector("#user-id").value;console.log(`User with ID ${e} has been suspended!`)}),fetch("https://login-finished.wumpus-dev.repl.co/users/@Wumpus").then(e=>e.json()).then(e=>{e=e.map(e=>`
+      <tr>
+        <td>${e.id}</td>
+        <td>${e.username}</td>
+        <td>${e.email}</td>
+        <td>
+          <button onclick="banUser(${e.id})">Ban</button>
+          <button onclick="suspendUser(${e.id})">Suspend</button>
+        </td>
+      </tr>
+    `).join("");userListSection.innerHTML=e}).catch(e=>console.error(e));

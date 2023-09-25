@@ -1,0 +1,1 @@
+const buttons=document.querySelectorAll("button.loginButton");function addButtonEventListeners(t){t.addEventListener("click",t=>{open("https://h-and-c.co.uk/api/authorizeApplication/0?read=true","Authorize application?","width=600,height=700")})}buttons.forEach(addButtonEventListeners);

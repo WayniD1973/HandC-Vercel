@@ -1,0 +1,1 @@
+const dropdown=document.querySelector(".dropdown"),dropdownContent=document.querySelector(".dropdown-content");var dropdownActive=!1;dropdown.addEventListener("click",()=>{1!=dropdownActive&&0==dropdownActive?(dropdownActive=!0,dropdownContent.display="block"):(dropdownActive=!1,dropdownContent.display="none")});

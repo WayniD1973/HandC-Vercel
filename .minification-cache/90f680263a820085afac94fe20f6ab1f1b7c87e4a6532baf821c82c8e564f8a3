@@ -1,0 +1,1 @@
+var selectedItem=1;function cycleCarousel(e){0==e?--selectedItem:selectedItem+=1,changeCarouselItem()}function changeCarouselItem(){if(0==selectedItem)for(item in selectedItem=3,document.querySelectorAll(".carouselBarItemCircle"))console.log(item.classList)}

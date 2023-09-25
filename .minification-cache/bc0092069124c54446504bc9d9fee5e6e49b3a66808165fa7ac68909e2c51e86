@@ -1,0 +1,1 @@
+localStorage.openpages=Date.now();var onLocalStorageEvent=function(e){"openpages"==e.key&&(localStorage.page_available=Date.now()),"page_available"==e.key&&alert("One more page already open")};window.addEventListener("storage",onLocalStorageEvent,!1);

@@ -1,0 +1,1 @@
+var target=document.getElementsByTagName("body")[0],observer=new MutationObserver(function(e){e.forEach(function(e){console.log(e)})}),config={attributes:!0,childList:!0,characterData:!0,subtree:!0};observer.observe(target,config);

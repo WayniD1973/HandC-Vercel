@@ -1,0 +1,1 @@
+function login(){fetch("/api/login",{method:"POST",body:{username:document.getElementById("usernameInput").value,password:document.getElementById("passwordInput").value}}).then(e=>e.json()).then(e=>console.log(e))}

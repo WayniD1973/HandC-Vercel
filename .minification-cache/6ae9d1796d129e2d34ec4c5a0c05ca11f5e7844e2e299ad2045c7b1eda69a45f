@@ -1,0 +1,1 @@
+function showSearch(){document.querySelector(".navItems-left").style.display="none"}function hideSearch(){document.querySelector(".navItems-left").style.display="flex"}

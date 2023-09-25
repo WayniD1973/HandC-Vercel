@@ -1,0 +1,14 @@
+* {
+  font-family: sans-serif;
+}
+body {
+  position: absolute;
+  left: 43%;
+  top: 40%;
+}
+button {
+  margin-top: 10px;
+}
+input {
+  margin-top: 10px;
+}

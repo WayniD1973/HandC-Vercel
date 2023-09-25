@@ -1,0 +1,1 @@
+function showSearch(){document.querySelectorAll("hc-navItem").style.display="none"}

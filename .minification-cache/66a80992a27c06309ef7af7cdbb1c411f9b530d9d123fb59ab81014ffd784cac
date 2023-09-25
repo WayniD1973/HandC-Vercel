@@ -1,0 +1,1 @@
+var i=1;setInterval(function(){document.getElementById("carouselBarItem1").style.background="unset",document.getElementById("carouselBarItem2").style.background="unset",document.getElementById("carouselBarItem3").style.background="unset",document.getElementById("carouselBarItem"+i).style.background="#a88d8d",i=i<3?++i:1},1e3);

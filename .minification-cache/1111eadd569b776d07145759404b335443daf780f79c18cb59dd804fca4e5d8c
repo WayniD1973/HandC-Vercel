@@ -1,0 +1,1 @@
+scriptManager.usableScriptsArray=["consoleManager","loginManager","dateManager"],scriptManager.includeScript=r=>{var e=document.createElement("script");e.src="./"+r+".js",document.body.appendChild(e)},scriptManager.includeAllScripts=()=>{arr.forEach(r=>{document.createElement("script").src="./"+r+".js"})};

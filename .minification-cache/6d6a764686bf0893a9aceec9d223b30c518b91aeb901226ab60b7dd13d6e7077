@@ -1,0 +1,1 @@
+fetch("https://h-and-c.co.uk/api/login",{referrer:"https://h-and-c.co.uk/signup",referrerPolicy:"strict-origin-when-cross-origin",body:"username=Test&password=Marriott123456&login=Log+In",method:"POST",mode:"cors",credentials:"include"});

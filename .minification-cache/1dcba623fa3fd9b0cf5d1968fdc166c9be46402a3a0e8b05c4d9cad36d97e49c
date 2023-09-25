@@ -1,0 +1,248 @@
+if("normal"==document.currentScript.getAttribute("navType")){const a=(new Date).getFullYear();var accountName,loginLink;document.querySelector("head").innerHTML+='<link rel="shortcut icon" href="/Logo.png">',document.querySelector("head").insertAdjacentHTML("afterbegin",'<script src="/cookies.js"><\/script>'),document.querySelector("main").insertAdjacentHTML("beforeend",'<script src="/test/scriptManagers/importScriptManager.js" type="module"><\/script>'),document.querySelector("head").innerHTML+='<meta name="viewport" content="width=device-width, initial-scale=1.0">',loginLink=console?(accountName="Sign In / Sign Up","https://login.h-and-c.co.uk"):(accountName="Profile ("+localStorage.getItem("username")+")","/profile/"),document.querySelector("body").insertAdjacentHTML("afterbegin",`<header>
+        <nav>
+            <h1><a href="/" style="text-decoration: none;">H&C</a></h1>
+            <ul class="primary-nav">
+                <li><a href="/#about">About Us</a></li>
+                <li><a href="/products/">Products</a></li>
+                <li><a href="/contact/">Contact Us</a></li>
+                <li><a href="`+loginLink+'">'+accountName+`</a></li>
+            </ul>
+						<div class="hamburger">
+								<div class="hamItem1"><hr size="8" width="40" color="white"></div>
+								<div class="hamItem2"><hr size="8" width="40" color="white"></div>
+								<div class="hamItem3"><hr size="8" width="40" color="white"></div>
+						</div>
+        </nav>
+    </header>`),document.querySelector("body").innerHTML+=`
+    <footer>
+        <div class="footer-content">
+            <div class="company-info">
+                <h3>H&C</h3>
+                <p>&copy; H&amp;C&trade;, `+a+`</p>
+								<p>All rights reserved</p>
+                <ul class="social-media">
+                </ul>
+            </div>
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/#about">About Us</a></li>
+                    <li><a href="/policies/tos/">Terms of Service (ToS)</a></li>
+                    <li><a href="/policies/privacy/">Privacy Policy</a></li>
+                    <li><a href="/products/">Products</a></li>
+                    <li><a href="/contact/">Contact Us</a></li>
+                    <li><a href="/support/">Support</a></li>
+                </ul>
+            </div>
+						
+        </div>
+    </footer>
+		<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+	color: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+		background: #444;
+}
+
+header {
+    background-color: #333; /* header's background color */
+    padding: 20px;
+}
+header a, footer a {
+	color: #ffffff;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.primary-nav {
+    list-style: none;
+    display: flex;
+}
+
+.primary-nav li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.primary-nav li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.primary-nav li a:hover {
+    background-color: #444; /* active menu item's background color */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.company-info h3,
+.quick-links h3,
+.contact-us h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.company-info p {
+    margin-bottom: 20px;
+}
+
+.social-media {
+    list-style: none;
+    display: flex;
+}
+
+.social-media li:not(:last-child) {
+    margin-right: 15px;
+}
+
+.contact-us label,
+.contact-us input,
+.contact-us textarea,
+.contact-us button {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+
+.contact-us button {
+    color: #000;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us button:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.products a {
+    font-size: 25px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.hamburger {
+	display: none;
+}
+
+@media (min-width: 768px) {
+    nav h1 {
+        font-size: 36px;
+    }
+
+    .primary-nav li a {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .company-info h3,
+    .quick-links h3,
+    .contact-us h3 {
+        font-size: 36px;
+    }
+
+    .company-info p {
+        font-size: 20px;
+    }
+
+    .contact-us label,
+    .contact-us input,
+    .contact-us textarea,
+    .contact-us button {
+        font-size: 24px;
+    }
+		
+
+    .content h2 {
+        font-size: 48px;
+    }
+
+    .content p {
+        font-size: 24px;
+    }
+}
+@media (max-width: 540px) {
+		.primary-nav {
+			display: none;
+		}
+		.hamburger {
+	 		display: block;
+		}
+	
+		.hamburger .hamItem2, .hamItem3 {
+			margin-top: 10px;
+	 		display: block;
+		}
+}
+</style>`}

@@ -1,0 +1,1 @@
+console.onopen=console.log("&copy; H&amp;C&trade;",dateManager.year);

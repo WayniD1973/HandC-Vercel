@@ -1,0 +1,1 @@
+var selectedItem=1;function cycleCarousel(e){0==e?--selectedItem:selectedItem+=1,changeCarouselItem()}function changeCarouselItem(){0==selectedItem&&(document.querySelectorAll(".carouselBarItemCircle").forEach(e=>{console.log(e.classList)}),selectedItem=3)}

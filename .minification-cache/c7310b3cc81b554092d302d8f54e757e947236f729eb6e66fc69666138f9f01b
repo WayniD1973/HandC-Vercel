@@ -1,0 +1,1 @@
+document.getElementById("profileForm").addEventListener("submit",function(e){e.preventDefault();e=document.getElementById("displayName").value;fetch("/api/changeDisplayName",{method:"POST",headers:{"Content-Type":"application/www-form-urlencoded",authorization:"Bearer "+accessCookie("connectionToken")},body:JSON.stringify({display_name:e})})});

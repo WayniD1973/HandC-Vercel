@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin UI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Admin Panel</div>
+      <nav>
+        <ul>
+          <li>Dashboard</li>
+          <li>User List</li>
+          <li>Ban User</li>
+          <li>Suspend User</li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <section class="user-list">
+        <h2>User List</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <!-- User data will be populated here dynamically -->
+          </tbody>
+        </table>
+      </section>
+      
+      <section class="ban-user">
+        <h2>Ban User</h2>
+        <form>
+          <label for="user-id">User ID:</label>
+          <input type="text" id="user-id" name="user-id" required />
+          <button type="submit">Ban User</button>
+        </form>
+      </section>
+      
+      <section class="suspend-user">
+        <h2>Suspend User</h2>
+        <form>
+          <label for="user-id">User ID:</label>
+          <input type="text" id="user-id" name="user-id" required />
+          <button type="submit">Suspend User</button>
+        </form>
+      </section>
+    </main>
+    
+    <script src="script.js"></script>
+  </body>
+	<script src="/nav.js" navType="normal"></script>
+</html>

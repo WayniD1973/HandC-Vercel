@@ -1,0 +1,1 @@
+fetch("https://h-and-c.co.uk/api/login",{headers:{"content-type":"application/json"},body:"username="+document.getElementById("usernameInput").value+"&password="+document.getElementById("passwordInput").value+"&login=Log+In",method:"POST"});

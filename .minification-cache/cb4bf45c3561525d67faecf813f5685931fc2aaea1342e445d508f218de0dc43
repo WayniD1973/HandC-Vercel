@@ -1,0 +1,1 @@
+function accessCookie(e){for(var n=e+"=",t=document.cookie.split(";"),r=0;r<t.length;r++){var i=t[r].trim();if(0==i.indexOf(n))return i.substring(n.length,i.length)}return""}

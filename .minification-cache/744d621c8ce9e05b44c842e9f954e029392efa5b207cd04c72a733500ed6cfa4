@@ -1,0 +1,1 @@
+function showSearch(){document.querySelectorAll("hc-navItem").forEach(hideNavItems)}function hideNavItems(e){console.log(e)}

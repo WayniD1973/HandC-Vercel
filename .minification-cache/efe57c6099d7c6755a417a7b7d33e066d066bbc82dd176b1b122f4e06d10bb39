@@ -1,0 +1,1 @@
+import"https://cdn.socket.io/socket.io-3.0.5.js";function accessCookie(t){for(var o=t+"=",e=document.cookie.split(";"),s=0;s<e.length;s++){var c=e[s].trim();if(0==c.indexOf(o))return c.substring(o.length,c.length)}return""}const socket=io("https://h-and-c.co.uk");module.exports=socket;export{socket};

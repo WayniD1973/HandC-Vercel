@@ -1,0 +1,201 @@
+var iframe=document.getElementById("logiframe"),input=document.getElementById("chatinput"),sidebar=document.getElementById("sidebar"),logo=document.getElementById("logo"),username=document.getElementById("usernameElement"),main=document.getElementById("main"),monokaiIframeStyle=`
+  position: absolute;
+  width: 78%;
+  left: 16.1%;
+  top: 0%;
+  height: 90%;
+  outline: none;
+  border-bottom: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+`,monokaiInputStyle=`
+  border-radius: 60px;
+  position: absolute;
+  bottom: 3%;
+  left: 18%;
+  right: 24%;
+  width: 70%;
+  height: 4%;
+  background-color: #282828;
+  color: #ffffff;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+`,monokaiSidebarStyle=`
+  background-color: #303030;
+  height: 100%;
+  width: 16%;
+  left: 0%;
+  top: 0%;
+  display: block;
+  position: absolute;
+  border-right: 2px solid 2#b3a36;
+`,monokaiLogoStyle=`
+  border-bottom: 1px solid #2b3a36;
+  font-family: arial;
+  font-size: 40px;
+  text-align: center;
+  color: #ffffff;
+`,monokaiUsernameStyle=`
+  font-family: arial;
+  font-size: 20px;
+  padding-top: 10px;
+  border-bottom: 1px solid #2b3a36;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #ffffff;
+`,monokaiHTMLStyle=`
+  background-color: #282828
+`,regularIframeStyle=`
+  position: absolute;
+  width: 78%;
+  left: 16.1%;
+  top: 0%;
+  height: 90%;
+  outline: none;
+  border-bottom: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+`,regularInputStyle=`
+  border-radius: 60px;
+  position: absolute;
+  bottom: 3%;
+  left: 18%;
+  right: 24%;
+  width: 70%;
+  height: 4%;
+  background-color: #ffffff;
+  color: #0000000;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+`,regularSidebarStyle=`
+  background-color: #ffffff;
+  height: 100%;
+  width: 16%;
+  left: 0%;
+  top: 0%;
+  display: block;
+  position: absolute;
+  border-right: 2px solid #000000;
+`,regularLogoStyle=`
+  border-bottom: 1px solid #000000;
+  font-family: arial;
+  font-size: 40px;
+  text-align: center;
+  color: #000000;
+`,regularUsernameStyle=`
+  font-family: arial;
+  font-size: 20px;
+  padding-top: 10px;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #000000;
+`,regularHTMLStyle=`
+  background-color: #ffffff
+`,rubyIframeStyle=`
+  position: absolute;
+  width: 78%;
+  left: 16.1%;
+  top: 0%;
+  height: 90%;
+  outline: none;
+  border-bottom: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+`,rubyInputStyle=`
+  border-radius: 60px;
+  position: absolute;
+  bottom: 3%;
+  left: 18%;
+  right: 24%;
+  width: 70%;
+  height: 4%;
+  background-color: #000000;
+  color: #ba1212;
+  border-top: 1px solid darkred;
+  border-bottom: 1px solid darkred;
+  border-left: 1px solid darkred;
+  border-right: 1px solid darkred;
+`,rubySidebarStyle=`
+  background-color: #000000;
+  height: 100%;
+  width: 16%;
+  left: 0%;
+  top: 0%;
+  display: block;
+  position: absolute;
+  border-right: 2px solid darkred;
+`,rubyLogoStyle=`
+  border-bottom: 1px solid darkred;
+  font-family: arial;
+  font-size: 40px;
+  text-align: center;
+  color: #ba1212;
+`,rubyUsernameStyle=`
+  font-family: arial;
+  font-size: 20px;
+  padding-top: 10px;
+  border-bottom: 1px solid darkred;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #ba1212;
+`,rubyHTMLStyle=`
+  background-color: #000000
+`,matrixIframeStyle=`
+  position: absolute;
+  width: 78%;
+  left: 16.1%;
+  top: 0%;
+  height: 90%;
+  outline: none;
+  border-bottom: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+`,matrixInputStyle=`
+  border-radius: 60px;
+  position: absolute;
+  bottom: 3%;
+  left: 18%;
+  right: 24%;
+  width: 70%;
+  height: 4%;
+  background-color: #000000;
+  color: green;
+  border-top: 1px solid darkgreen;
+  border-bottom: 1px solid darkgreen;
+  border-left: 1px solid darkgreen;
+  border-right: 1px solid darkgreen;
+`,matrixSidebarStyle=`
+  background-color: #000000;
+  height: 100%;
+  width: 16%;
+  left: 0%;
+  top: 0%;
+  display: block;
+  position: absolute;
+  border-right: 2px solid darkgreen;
+`,matrixLogoStyle=`
+  border-bottom: 1px solid darkgreen;
+  font-family: arial;
+  font-size: 40px;
+  text-align: center;
+  color: lime;
+`,matrixUsernameStyle=`
+  font-family: arial;
+  font-size: 20px;
+  padding-top: 10px;
+  border-bottom: 1px solid darkgreen;
+  padding-bottom: 10px;
+  text-align: center;
+  color: lime;
+`,matrixHTMLStyle=`
+  background-color: #000000
+`;function loadtheme(){var e=localStorage.getItem("Wechat_Theme");"monokai"===e?(reloadlog(),iframe.style=monokaiIframeStyle,input.style=monokaiInputStyle,sidebar.style=monokaiSidebarStyle,logo.style=monokaiLogoStyle,username.style=monokaiUsernameStyle,main.style=monokaiHTMLStyle):"regular"===e?(reloadlog(),iframe.style=regularIframeStyle,input.style=regularInputStyle,sidebar.style=regularSidebarStyle,logo.style=regularLogoStyle,username.style=regularUsernameStyle,main.style=regularHTMLStyle):"matrix"===e?(reloadlog(),iframe.style=matrixIframeStyle,input.style=matrixInputStyle,sidebar.style=matrixSidebarStyle,logo.style=matrixLogoStyle,username.style=matrixUsernameStyle,main.style=matrixHTMLStyle):"ruby"===e&&(reloadlog(),iframe.style=rubyIframeStyle,input.style=rubyInputStyle,sidebar.style=rubySidebarStyle,logo.style=rubyLogoStyle,username.style=rubyUsernameStyle,main.style=rubyHTMLStyle)}function monokaiTheme(){localStorage.setItem("Wechat_Theme","monokai"),loadtheme()}function regularTheme(){localStorage.setItem("Wechat_Theme","regular"),loadtheme()}function matrixTheme(){localStorage.setItem("Wechat_Theme","matrix"),loadtheme()}function rubyTheme(){localStorage.setItem("Wechat_Theme","ruby"),loadtheme()}window.onload=loadtheme();

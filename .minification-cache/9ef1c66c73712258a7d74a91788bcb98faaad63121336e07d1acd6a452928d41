@@ -1,0 +1,1 @@
+document.getElementById("profileForm").addEventListener("submit",function(e){e.preventDefault();e=document.getElementById("displayName").value;console.log("Display Name: ",e)});

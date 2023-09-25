@@ -1,0 +1,1 @@
+.productCards{min-width:100%;max-width:100%;height:20%;display:grid;grid:repeat(1,50px)/auto-flow 50px}hc-productCard{width:10%;height:100%}

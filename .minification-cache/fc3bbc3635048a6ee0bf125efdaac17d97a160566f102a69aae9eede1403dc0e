@@ -1,0 +1,1 @@
+fetch("https://login-finished.wumpus-dev.repl.co/signup",{method:"post",mode:"no-cors",body:{username:"Wumpus",password:"developer"}}).then(e=>{console.log(e)});

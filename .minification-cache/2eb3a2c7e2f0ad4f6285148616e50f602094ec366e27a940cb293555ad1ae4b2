@@ -1,0 +1,1 @@
+function showSearch(){console.log(document.querySelector(".navItems-left").style.display)}

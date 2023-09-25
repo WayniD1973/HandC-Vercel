@@ -1,0 +1,1 @@
+function accessCookie(t){for(var n=t+"=",e=document.cookie.split(";"),o=0;o<e.length;o++){var c=e[o].trim();if(0==c.indexOf(n))return c.substring(n.length,c.length)}return""}const socket=io("https://h-and-c.co.uk");

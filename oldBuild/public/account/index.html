@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Account Settings</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="H&amp;C: The company that does everything you want!"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@v2.0.0/modern-normalize.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/Logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/Logo 16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      sizes="48x48"
+      href="Logo.png"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="/Logo.png" sizes="48x48" type="image/png" />
+    <meta name="theme-color" content="#444444" />
+    <meta property="og:title" content="H&amp;C" />
+    <meta
+      property="og:description"
+      content="H&amp;C: The company that does everything you want!"
+    />
+    <meta property="og:image" content="/Logo.png" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="H&amp;C" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="H&amp;C" />
+    <meta name="twitter:title" content="H&amp;C" />
+    <meta
+      name="twitter:description"
+      content="H&amp;C: The company that does everything you want!"
+    />
+    <meta name="twitter:image" content="/Logo.png" />
+    <meta name="twitter:domain" content="h-and-c.co.uk" />
+    <meta itemprop="name" content="H&amp;C" />
+    <meta
+      itemprop="description"
+      content="H&amp;C: The company that does everything you want!"
+    />
+    <meta itemprop="image" content="/Logo.png" />
+    <meta
+      name="keywords"
+      content="H&C, H&amp;C, HandC, H-and-C, H and C, h&c, h&amp;c, handc, h-and-c, h and c"
+    />
+    <meta name="author" property="og:author" content="H&amp;C" />
+    <meta name="google" value="notranslate" />
+		<script src="/cookies.js"></script>
+  </head>
+  <body>
+		<main>
+
+    <div class="account">
+      <div class="profile">
+        <img
+          src="https://login.h-and-c.co.uk/assets/profile/@<username>/profilePicture.png"
+          alt="User Profile Picture"
+          id="profile-pic"
+        />
+        <input type="file" id="file-upload" />
+      </div>
+      <div class="container">
+        <div class="fields">
+          <h2>Profile</h2>
+          <div class="username">
+            <label for="username">Username:</label>
+            <input type="text" id="username" value="" maxlength="50"/>
+						<div id="characterCounter" class="characterCounter">
+    					<span id="usernameCurrentAmountOfCharacters" class="currentAmountOfCharacters">0</span>
+    					<span id="maximumAmountOfCharacters" class="maximumAmountOfCharacters">/ 300</span>
+  					</div>
+          </div>
+          <div class="bio">
+            <label for="bio">Bio:</label>
+            <textarea id="bio" resizable="false" maxlength="200"></textarea>
+						<div id="characterCounter" class="characterCounter">
+    					<span id="usernameCurrentAmountOfCharacters" class="currentAmountOfCharacters">0</span>
+    					<span id="maximumAmountOfCharacters" class="maximumAmountOfCharacters">/ 300</span>
+  					</div>
+          </div>
+					<div class="links">
+              <div class="grid">
+                <button disabled class="saveProfileChanges" id="saveProfileChanges">Save Changes</button>
+              </div>
+            </div>
+        </div>
+        <div class="container">
+          <div class="fields sectionSpace">
+            <h2>Account</h2>
+            <div class="username">
+              <label for="username">Email Address:</label>
+              <input
+                type="text"
+                id="username"
+                value="this is not a real email address@gmail.com"
+              />
+            </div>
+            <div class="display-name">
+              <label for="display-name">Password:</label>
+              <input
+                type="text"
+                id="display-name"
+                value="This is a password 1234"
+                password
+              />
+            </div>
+          </div>
+          <div class="fields sectionSpace">
+            <h2>Studio</h2>
+            <div class="username">
+              <label for="username">Theme</label>
+              <div class="dropdown">
+                <button class="dropbtn">
+                  Select Theme (Current:
+                  <justatagthatcanbeusedinjavascript
+                    >Theme 1</justatagthatcanbeusedinjavascript
+                  >)
+                </button>
+                <div class="dropdown-content">
+                  <button>Theme 1</button>
+                  <button>Theme 2</button>
+                  <button>Theme 3</button>
+                </div>
+              </div>
+            </div>
+            <div class="display-name">
+              <!-- fix toggles -->
+              <!-- finish design -->
+              <div class="toggleContainer">
+                <label for="toggle">Show Following Number:</label>
+                <label for="toggle">
+                  <input type="checkbox" id="toggle" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+              <div class="toggleContainer">
+                <label for="toggle2">Show Followers Number:</label>
+                <label for="toggle2">
+                  <input type="checkbox" id="toggle2" />
+                  <span class="toggle-slider2"></span>
+                </label>
+              </div>
+            </div>
+            <div class="links">
+              <div class="grid">
+                <a href="#">Launch Studio</a>
+                <a href="#">Support</a>
+                <a href="#">Status</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+              </div>
+              <a href="#" class="scroll-top">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+		<script src="../scriptManagers/importScriptManager.js" type="module"></script>
+		<script src="https://h-and-c.co.uk/nav.js" navType="normal"></script>
+		</main>
+  </body>
+</html>
