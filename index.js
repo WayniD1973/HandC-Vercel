@@ -19,7 +19,7 @@ const serviceWorkersRoutes = require('./routes/built/serviceWorkersRoutes.js');
 const setCookieRoutes = require('./routes/built/setCookieRoutes.js');
 const signupRoutes = require('./routes/built/signupRoutes.js');
 const apiRoutes = require('./routes/built/apiRoutes.js');
-const authRoutes = require('./routes/built/authRoutes.js');
+// const authRoutes = require('./routes/built/authRoutes.js');
 const { rateLimit } = require('express-rate-limit');
 const requestIP = require('request-ip');
 const cookie = require('cookie');
@@ -164,7 +164,7 @@ io.on('connection', function(socket){
 app.use('/socket.io/', cors({ allowedOrigins: [ 'github.com', 'google.com' ] }));
 app.use('/test', express.static('./public'))
 app.use('/api', apiRoutes)
-app.use('/auth', authRoutes)
+// app.use('/auth', authRoutes)
 app.use('/chat', chatRoutes)
 app.use('/hammy', hammyRoutes)
 app.use('/hello', helloRoutes)
