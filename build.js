@@ -12,7 +12,7 @@ exec("bash build.sh", (error, stdout, stderr) => {
 
   // Run "node updating.js" command
 });
-exec('kill $(pidof -s node index.js)', (error, stdout, stderr) => {
+exec("kill $(pidof -s node index.js)", (error, stdout, stderr) => {
   if (error) {
     console.error(`exec error: ${error}`);
     return;

@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "token": "node agoraGenerateToken.js",
-    "run": "node build/index.js",
-    "build": "bash build.sh"
+    "run": "node index.js",
+    "build": "echo \"There is no build command\""
   },
   "keywords": [],
   "author": "",
@@ -21,7 +21,8 @@
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "ejs": "^3.1.9",
-    "express": "^4.18.2",
+    "express": "npm:Express@^3.0.1",
+    "Express": "^3.0.1",
     "express-cors": "^0.0.3",
     "express-minify": "^1.0.0",
     "express-minify-html": "^0.12.0",

@@ -1,0 +1,30 @@
+.submit {
+  left: 101%;
+  top: 0%;
+  position: absolute;
+  display: none;
+}
+color {
+  color: green;
+  color: lime;
+  color: darkgreen;
+}
+color {
+  color: #ba1212;
+  color: darkred;
+  color: #300303;
+  color: black;
+}
+.translate {
+  position: absolute;
+  bottom: 0%;
+}
+.skiptranslate {
+  bottom: 2%;
+  position: absolute;
+}
+.close {
+  position: absolute;
+  right: 1%;
+  bottom: 1%;
+}
