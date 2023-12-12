@@ -1,13 +1,8 @@
-html, body, main {
-	overflow-x: hidden;
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
 		--carouselBar-background: #302727;
 		--carouselBar-svg-fill: #ffffff;
 		--productCard-background: #302727;
-  	--studioCard-color: #171717;
 	}
 }
 
@@ -138,225 +133,107 @@ svg:hover, path:hover {
 		max-width: 215px;
 	}
 }
-
-.studioProductsHeadingContainer {
-	padding-left: 280px;
+.recentEvents {
+	padding: 10px;
 }
-
-.studioProductsHeading {
-  background: linear-gradient(to right, #d10a9c, #06f923);
-  -webkit-background-clip: text;
-  color: transparent;
-	margin: 10px 0px;
-	margin-right: 835px;
-}
-
-.studioProductsHeadingContainer text {
-	color: #ffffff;
-}
-
-.studioProductsArea {
-	/* min-width: 100dvw; */
-	max-width: 100dvw;
-	padding: 10px 20px;
+hc-grid {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	flex-wrap: wrap;
-}
-
-/* Studio Product Card Styles */
-
-.studioCards {
-  display: flex;
+	align-items: flex-start;
+	justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 8px;  
-  max-width: 916px;
-  width: calc(100% - 20px);
 }
-
-.studioCards:hover > .studioCard::after {
-  opacity: 1;
+hc-gridItem {
+	transition: transform 0.3s ease;
+	border-radius: 5px;
+	border: 1px solid #393939;
+	min-width: 300px;
+	max-width: 300px;
+	margin: 5px;
+	box-shadow: 0 0 30px rgb(0 0 0 / 50%);
+	background: var(--productCard-background);
+	color: var(--text-color);
+	overflow-x: hidden;
 }
-
-.studioCard {
-  background-color: rgba(160, 160, 160, 0.1);
-  border-radius: 10px;
-  cursor: pointer;
+hc-gridItem:hover {
+	transform: scale(1.05);
+	cursor: pointer;
+}
+hc-gridItem img {
+	min-width: 300px;
+	max-width: 300px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	min-height: 150px;
+	max-height: 150px;
+	transform: translate(-1px, 0px);
+}
+hc-gridItem h1 {
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+hc-gridItem p {
+	margin: 5px 5px 10px 5px;
+	font-size: 20px;
+}
+@media screen and (max-width: 1250px) {
+	hc-gridItem:last-child {
+		flex: 50%;
+	}
+}
+@media screen and (max-width: 940px) {
+	hc-gridItem {
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
+	hc-gridItem:nth-child(3) {
+		flex: 50%;
+	}
+	hc-gridItem:last-child {
+		flex: 50%;
+	}
+}
+.allProductsHeading-container {
+	margin-top: 5px;
+	margin-bottom: 5px;
   display: flex;
-  height: 260px;
-  flex-direction: column;
-  position: relative;
-  width: 300px;
-	transition: all 0.5s;
-}
-
-.studioCard:hover::before {
-  opacity: 1;
-}
-
-.studioCard:hover {
-	scale: 1.02;
-}
-	
-.studioCard::before,
-.studioCard::after {
-  border-radius: inherit;
-  content: "";
-  height: 100%;
-  left: 0px;
-  opacity: 0;
-  position: absolute;
-  top: 0px;
-  transition: opacity 500ms;
+  align-items: center;
   width: 100%;
 }
 
-.studioCard::before {
-  background: radial-gradient(
-    800px circle at var(--mouse-x) var(--mouse-y), 
-    rgba(160, 160, 160, 0.06),
-    transparent 40%
-  );
-  z-index: 3;
+.allProductsHeading-text {
+  text-align: center;
+	color: var(--text-color);
+  padding: 0 10px;
 }
 
-.studioCard::after {  
-  background: radial-gradient(
-    600px circle at var(--mouse-x) var(--mouse-y), 
-    rgba(160, 160, 160, 0.4),
-    transparent 40%
-  );
-  z-index: 1;
-}
-
-.studioCard > .studioCardContent {
-  background-color: var(--card-color);
-  border-radius: inherit;
-  display: flex;
-  flex-direction: column;
+.allProductsHeading-line {
   flex-grow: 1;
-  inset: 1px;
-  padding: 10px;
-  position: absolute;
-  z-index: 2;
-}
-
-
-.studioCards > h1, h2, h3, h4, span {
-  color: #f0f0f0;
-  font-family: "Rubik", sans-serif;
-  font-weight: 400;
-  margin: 0px;
-}
-
-svg {  
-  color: #f0f0f0;
-}
-
-.studioCardImage {
-  align-items: center;
-  display: flex;
-  height: 140px;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.studioCardImage > svg {
-  font-size: 6em;
-  opacity: 0.25;
-	width: 140px;
-	height: 140px;
-}
-
-.studioCardInfoWrapper {
-  align-items: center;
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-start;
-  padding: 0px 20px;
-}
-
-.studioCardInfo {
-  align-items: flex-start;
-  display: flex;
-  gap: 10px;
-}
-
-.studioCardInfo > svg {  
-  font-size: 1em;
-  height: 20px;
-  line-height: 20px;
-}
-
-.studioCardInfoTitle > h3 {
-  font-size: 1.1em;
-  line-height: 20px;
-}
-
-.studioCardInfoTitle > h4 {
-  color: rgba(160, 160, 160, 0.5);
-  font-size: 0.85em;
-  margin-top: 8px;
-}
-	
-@media(max-width: 1000px) {
-  body {
-    align-items: flex-start;  
-    overflow: auto;
-  }
-  
-  .studioCards {    
-    max-width: 1000px;
-    padding: 10px 0px;
-  }
-  
-  .studioCard {
-    flex-shrink: 1;
-    width: calc(50% - 4px);
-  }
-}
-
-@media(max-width: 500px) {
-  .studioCard {
-    height: 180px;
-  }
-  
-  .studioCardImage {
-    height: 80px;  
-  }
-  
-  .studioCardImage > svg {
-    font-size: 3em;
-  }
-    
-  .studioCardInfoWrapper {
-    padding: 0px 10px;
-  }
-  
-  .studioCardInfo > svg { 
-    font-size: 0.8em; 
-  }
-  
-  .studioCardInfoTitle > h3 {
-    font-size: 0.9em;
-  }
-
-  .studioCardInfoTitle > h4 {
-    font-size: 0.8em;
-    margin-top: 4px;
-  }
-}
-
-@media(max-width: 320px) {
-  .studioCard {
-    width: 100%;
-  }
-}
-.lineContainer::before {
-  content: "";
-  display: block;
   height: 1px;
-  background-color: #343232;
-  margin: 20px 150px;
+  background: #b3b3b3; /* Customize the color and thickness of the line */
+}
+.allProducts {
+	padding: 10px;
+}
+@media screen and (max-width: 310px) {
+	hc-gridItem .allProductsGridItemImageContainer img, hc-gridItem .recentEventsGridItemImageContainer img {
+		min-width: 200px;
+		max-width: 200px;
+	}
+	hc-gridItem .allProductsGridItemImageContainer, hc-gridItem .recentEventsGridItemImageContainer {
+		display: flex;
+		justify-content: center;
+	}
+	hc-gridItem .allProductsGridItemTextContainer, hc-gridItem .recentEventsGridItemTextContainer {
+		display: flex;
+		justify-content: center;
+  	flex-wrap: wrap;
+	}
+	hc-gridItem .allProductsGridItemTextContainer p, hc-gridItem .allProductsGridItemTextContainer h1, hc-gridItem .recentEventsGridItemTextContainer p {
+		min-width: 200px;
+		max-width: 200px;
+	}
+	hc-gridItem .allProductsGridItemTextContainer p {
+		flex: 50%;
+	}
 }
